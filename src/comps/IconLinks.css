@@ -1,0 +1,9 @@
+
+.iconlink {
+  color: inherit;
+  font-size: 2em;
+}
+
+.iconlink:hover, .iconlink:active {
+  color: white;
+}

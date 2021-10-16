@@ -1,0 +1,26 @@
+
+.section {}
+
+.section-content {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-content: space-between;
+  gap: 50px 100px;
+}
+
+.experiment-block {
+  width: 30%;
+  min-width: 30%;
+  height: 155px;
+  /* border: 1px solid rgba(95, 48, 126, 0.336); */
+  border-radius: 8px;
+  background-color: rgba(95, 48, 126, 0.055);
+}
+
+.ghost-block {
+  width: 30%;
+  min-width: 30%;
+  height: 155px;
+  color: #0000;
+}

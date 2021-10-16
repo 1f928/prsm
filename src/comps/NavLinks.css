@@ -1,0 +1,28 @@
+
+.navlinks {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+
+.navlinks > a {
+  right: 0px;
+  width: fit-content;
+
+  padding: 3px 17px 10px 17px;
+  margin: 0px 0 15px 0;
+  font-size: 3em;
+  font-weight: 700;
+  text-decoration: none;
+  color: inherit;
+
+  /* color: transparent;
+  background-clip: text;
+  background-color: #5d5db4;
+  text-shadow: 1px 3px 3px #7c7cd99a, -1px 3px 3px #7c7cd99a; */
+}
+
+.navlinks > a:hover, a:active {
+  color: white;
+  /* background-color: #4f4f9e; */
+}
