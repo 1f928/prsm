@@ -24,7 +24,7 @@
   width: 30px;
   height: 120px;
   border-radius: 20px;
-  border: 3px solid var(--primary-fg-color);
+  border: .2em solid var(--primary-fg-color);
 }
 
 .fake-settings:hover {

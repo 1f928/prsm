@@ -10,14 +10,48 @@
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  align-items: flex-end;
 
   box-shadow: var(--inside-border);
 }
 
 .info {
-  font-size: 2em;
+  position: relative;
+  width: fit-content;
 }
 
 .info:hover {
   color: var(--fg-hover-color);
+}
+
+.info-box {
+  z-index: 1;
+  border: .1em solid;
+  border-radius: 10px;
+  position: absolute;
+  right: 10px;
+  bottom: 10px;
+  width: fit-content;
+
+  padding: 10px 30px 30px 10px;
+}
+
+.info-box > p {
+  display: inline-block;
+}
+
+.info-box.hidden {
+  display: none;
+}
+
+.info > svg {
+  position: relative;
+  z-index: 2;
+  padding: -3px;
+  border-radius: 3em;
+  border: .2em solid var(--primary-bg-color);
+  box-shadow: inset 0px 0px 0px 1em var(--primary-bg-color);
+  font-size: 2em;
+  display: block;
+  float: right;
 }
