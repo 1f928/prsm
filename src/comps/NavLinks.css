@@ -23,6 +23,6 @@
 }
 
 .navlinks > a:hover, a:active {
-  color: white;
+  color: var(--fg-hover-color);
   /* background-color: #4f4f9e; */
 }

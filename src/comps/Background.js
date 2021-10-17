@@ -28,7 +28,7 @@ function Background(props) {
     canvas.width = width;
     canvas.height = height;
 
-    context.fillStyle='#7c7cd9';
+    // context.fillStyle='#7c7cd9';
     context.fillRect(0,0,canvas.width,canvas.height);
     Array.from({length: 1000}).forEach(_ => drawStar(context, width, height));
   }, [ref]);

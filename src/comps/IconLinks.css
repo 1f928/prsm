@@ -5,5 +5,5 @@
 }
 
 .iconlink:hover, .iconlink:active {
-  color: white;
+  color: var(--fg-hover-color);
 }

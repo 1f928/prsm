@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 import {
   BrowserRouter as Router,
   Switch,
@@ -6,7 +6,8 @@ import {
 } from 'react-router-dom';
 
 import { MobileContext, useMobileCheck } from './util/mobility';
-import { SettingsContext, defaultSettings } from './util/settings';
+import { SettingsContext, useSettings } from './util/settings';
+import ThemeProvider from './themes';
 
 import Home from './views/Home';
 import Experiments from './views/Experiments';
@@ -22,13 +23,14 @@ import './App.css';
 
 function App() {
   const isMobile = useMobileCheck();
-  const [settings, setSettings] = useState(defaultSettings);
+  const {settings, updateSettings} = useSettings();
 
   return (
-    <SettingsContext.Provider value={{settings, setSettings}}>
+    <SettingsContext.Provider value={{settings, updateSettings}}>
     <MobileContext.Provider value={isMobile}>
+    <ThemeProvider theme={settings.theme} brightness={settings.brightness} />
       <div className="app">
-        <Background />
+        {/* <Background /> */}
         <Router>
           {isMobile ? <Topbar /> : <Leftbar />}
           <div className="content">
