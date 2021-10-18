@@ -2,6 +2,7 @@
 .iconlink {
   color: inherit;
   font-size: 2em;
+  transition: color .25s ease-in;
 }
 
 .iconlink:hover, .iconlink:active {

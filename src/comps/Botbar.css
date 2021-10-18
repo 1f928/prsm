@@ -1,0 +1,11 @@
+
+.botbar {
+  min-height: 100px;
+  width: 100%;
+  position: sticky;
+  bottom: 0;
+  background: inherit;
+
+  transition: box-shadow .25s ease-in;
+  box-shadow: var(--inside-border);
+}

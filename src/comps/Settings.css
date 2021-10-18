@@ -5,6 +5,10 @@
   align-items: flex-end;
 }
 
+.brightness-icon {
+  transition: color .25s ease-in;
+}
+
 .brightness-icon.moon {
   font-size: 2.5em;
 }

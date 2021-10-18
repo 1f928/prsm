@@ -1,9 +1,5 @@
 
-.navlinks {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-end;
-}
+
 
 .navlinks > a {
   right: 0px;
@@ -15,6 +11,7 @@
   font-weight: 700;
   text-decoration: none;
   color: inherit;
+  transition: color .25s ease-in;
 
   /* color: transparent;
   background-clip: text;
@@ -24,5 +21,4 @@
 
 .navlinks > a:hover, a:active {
   color: var(--fg-hover-color);
-  /* background-color: #4f4f9e; */
 }

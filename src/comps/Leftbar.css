@@ -11,16 +11,24 @@
   flex-direction: column;
   align-items: flex-end;
 
+  transition: box-shadow .25s ease-in;
   box-shadow: var(--inside-border);
 }
 
 .name-bar > h1 {
   font-size: 3.5em;
   font-weight: 700;
+  transition: color .25s ease-in;
 }
 
 .leftbar > h2 {
   font-size: 2.2em;
+}
+
+.leftbar > .navlinks {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
 }
 
 .name-bar > .iconlinks {

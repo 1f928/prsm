@@ -25,7 +25,7 @@ export default function Settings (props) {
       {(brightness === "light") ?
       <BsMoonStars className="brightness-icon moon" onClick={updateBrightness}/> :
       <IoSunnyOutline className="brightness-icon sun" onClick={updateBrightness} />}
-      <div className="fake-settings" />
+      {/* <div className="fake-settings" /> */}
       {/* <ThemePicker /> */}
     </div>
   );
