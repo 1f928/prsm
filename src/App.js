@@ -13,7 +13,7 @@ import Home from './views/Home';
 import Experiments from './views/Experiments';
 import Stats from './views/Stats';
 
-import Background from './comps/Background';
+// import Background from './comps/Background';
 import Topbar from './comps/Topbar';
 import Botbar from './comps/Botbar';
 import Leftbar from './comps/Leftbar';

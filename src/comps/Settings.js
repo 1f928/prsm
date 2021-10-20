@@ -16,9 +16,9 @@ export default function Settings (props) {
     updateSettings({brightness: newSetting});
   }
 
-  const updateTheme = (themeName) => () => {
-    if (theme !== themeName) updateSettings({theme: themeName});
-  }
+  // const updateTheme = (themeName) => () => {
+  //   if (theme !== themeName) updateSettings({theme: themeName});
+  // }
 
   return (
     <div className="settings">

@@ -44,6 +44,7 @@ const loadTheme = (theme, brightness) => {
 
     // Force a render and then re-enable transitions:
     const _ = window.getComputedStyle(css).opacity;
+    if (_); // f***off, no-unused-vars
     document.head.removeChild(css);
 }
 
