@@ -10,7 +10,7 @@ const useMobileCheck = () => {
     return () => window.removeEventListener('resize', () => setWidth(getWidth));
   }, []);
 
-  return width <= 1280;
+  return width <= 1500;
 };
 
 const MobileContext = React.createContext(false);

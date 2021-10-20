@@ -8,7 +8,7 @@ export default function Leftbar (props) {
   return (
     <div className="leftbar">
       <div className="name-bar">
-        <h1>brian hagerty</h1>
+        <h1>brian_hagerty</h1>
         <IconLinks />
       </div>
       <NavLinks />

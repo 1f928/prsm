@@ -1,7 +1,7 @@
 import IconLinks from './IconLinks';
 import Info from './Info';
 
-import './Botbar.css';
+// import './Botbar.css';
 
 export default function Botbar (props) {
 

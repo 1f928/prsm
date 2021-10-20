@@ -4,14 +4,26 @@
   width: 100vw;
   color: var(--primary-fg-color);
   background-color: var(--primary-bg-color);
+  
   display: flex;
   flex-direction: row;
-  overflow: auto;
+  justify-content: space-between;
+  
   overflow-y: scroll;
+  overflow-x: hidden;
+}
+
+.leftbar {
+  flex: 1 1 20%;
+}
+
+.rightbar {
+
+  flex: 1 1 10%;
 }
 
 .content {
-  width: 65%;
+  flex: 1 1 70%;
   text-align: center;
   transition: all .25s ease-in;
 
@@ -24,12 +36,30 @@
   z-index: -1;
 }
 
-@media only screen and (max-width: 1280px) {
+@media only screen and (max-width: 1500px) {
   .app {
     flex-direction: column;
+    overflow-y: hidden;
+  }
+
+  .topbar {
+    max-height: 7%;
+    min-height: 7%;
+  }
+
+  .botbar {
+    max-height: 7%;
+    min-height: 7%;
+
+    background: inherit;
+    box-shadow: var(--inside-border);
   }
 
   .content {
+    flex: 0 0 86%;
     width: 100%;
+    max-height: 86%;
+    overflow-y: scroll;
+    overflow-x: hidden;
   }
 }

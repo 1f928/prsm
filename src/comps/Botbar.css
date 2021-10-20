@@ -3,8 +3,9 @@
   --svg-size: 3;
   min-height: 100px;
   width: 100%;
-  position: sticky;
+  /* position: sticky;
   bottom: 0;
+  right: 0; */
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -39,3 +40,8 @@
   font-size: 2em;
 }
 
+@media only screen and (max-width: 1280px) {
+  .botbar {
+    position: relative;
+  }
+}
