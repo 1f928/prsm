@@ -1,5 +1,5 @@
-import IconLinks from './IconLinks';
-import Info from './Info';
+// import IconLinks from './IconLinks';
+// import Info from './Info';
 
 // import './Botbar.css';
 
