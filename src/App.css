@@ -37,22 +37,24 @@
     position: sticky;
     top: 0;
     width: 100%;
-    max-height: 7vh;
-    min-height: 7vh;
+    height: 3em;
 
     background: inherit;
     box-shadow: var(--inside-border);
+    
+    overflow: hidden;
   }
 
   .botbar {
     position: sticky;
     bottom: 0;
     width: 100%;
-    max-height: 7vh;
-    min-height: 7vh;
+    height: 3em;
 
     background: inherit;
     box-shadow: var(--inside-border);
+    
+    overflow: hidden;
   }
 
   .content {
@@ -61,3 +63,5 @@
     max-height: 86%;
   }
 }
+
+@media only screen
