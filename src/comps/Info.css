@@ -1,0 +1,91 @@
+
+
+
+.info-box {
+
+  /* Required for absolute on SVG */
+  position: relative;
+  bottom: 0;
+  right: 0;
+
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
+  transition: color .3s ease-in .5s;
+
+  min-width: 2.8em;
+  min-height: 2.8em;
+}
+
+.info-box.vis {
+  /* color: var(--fg-hover-color); */
+  transition: color .3s ease-in;
+}
+
+.info-box > svg {
+  display: block;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  
+  font-size: 2em;
+
+  border-radius: 2em;
+  border: .2em solid var(--primary-bg-color);
+  box-shadow: inset 0px 0px 0px 1em var(--primary-bg-color);
+}
+
+.info-box > svg:hover {
+  color: var(--fg-hover-color);
+}
+
+.info {
+  background-color: var(--primary-bg-color);
+
+  position: relative;
+  bottom: 1.2em;
+  right: 1.2em;
+
+  overflow: hidden;
+  max-width: 0;
+  max-height: 0;
+
+  border: .2em solid;
+  border-radius: .5em;
+  user-select: none;
+
+  transition:  padding .6s ease-in, max-width .6s ease-in, max-height .6s ease-in;
+
+  white-space: nowrap;
+  text-align: center;
+
+  font-family: monospace;
+  font-size: 1.25em;
+}
+
+.info-box.vis > .info {
+  padding: 2em;
+  max-width: 10em;
+  max-height: 10em;
+}
+
+.info > p {
+  display: block;
+  user-select: none;
+
+  margin: 0 0 1em 0;
+}
+
+.info > a {
+  color: var(--primary-fg-color);
+  text-decoration-style: wavy;
+  text-underline-offset: 0em;
+}
+
+.info > a:hover {
+  color: var(--fg-hover-color);
+}
+
+.info > a > svg {
+  margin-left: 10px;
+}

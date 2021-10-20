@@ -8,11 +8,10 @@
   flex-direction: row;
   overflow: auto;
   overflow-y: scroll;
-  transition: background-color .25s ease-in;
 }
 
 .content {
-  width: 50%;
+  width: 65%;
   text-align: center;
   transition: all .25s ease-in;
 

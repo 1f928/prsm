@@ -8,7 +8,9 @@ export default function Botbar (props) {
   return (
     <div className="botbar">
       <IconLinks />
-      <Info />
+      <div className="info-container">
+        <Info />
+      </div>
     </div>
   );
 };
