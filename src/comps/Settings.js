@@ -9,7 +9,7 @@ import './Settings.css';
 export default function Settings (props) {
 
   const {settings, updateSettings} = useContext(SettingsContext);
-  const {brightness, theme} = settings;
+  const {brightness} = settings;
 
   const updateBrightness = () => {
     const newSetting = (brightness === "light") ? "dark" : "light";
