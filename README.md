@@ -1,2 +1,3 @@
 # TODO:
 
+- fix mobile layout
