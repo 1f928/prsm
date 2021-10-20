@@ -1,6 +1,6 @@
 
-import NavLinks from './NavLinks';
-import Settings from './Settings';
+// import NavLinks from './NavLinks';
+// import Settings from './Settings';
 
 // import './Topbar.css';
 
