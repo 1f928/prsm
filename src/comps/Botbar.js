@@ -7,10 +7,11 @@ export default function Botbar (props) {
 
   return (
     <div className="botbar">
-      <IconLinks />
+      bot
+      {/* <IconLinks />
       <div className="info-container">
         <Info />
-      </div>
+      </div> */}
     </div>
   );
 };

@@ -2,14 +2,15 @@
 import NavLinks from './NavLinks';
 import Settings from './Settings';
 
-import './Topbar.css';
+// import './Topbar.css';
 
 export default function Topbar(props) {
 
   return (
     <div className="topbar">
-      <NavLinks />
-      <Settings />
+      top
+      {/* <NavLinks />
+      <Settings /> */}
     </div>
   );
 };

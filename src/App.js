@@ -29,20 +29,20 @@ function App() {
     <SettingsContext.Provider value={{settings, updateSettings}}>
     <MobileContext.Provider value={isMobile}>
     <ThemeProvider theme={settings.theme} brightness={settings.brightness} />
-      <div className="app">
-        {/* <Background /> */}
-        <Router>
-          {isMobile ? <Topbar /> : <Leftbar />}
-          <div className="content">
-            <Switch>
-              <Route path="/experiments" component={Experiments} />
-              <Route path="/stats" component={Stats} />
-              <Route path="/" component={Home} />
-            </Switch>
-          </div>
-          {isMobile ? <Botbar /> : <Rightbar />}
-        </Router>
-      </div>
+      
+      {/* <Background /> */}
+      <Router>
+        {isMobile ? <Topbar /> : <Leftbar />}
+        <div className="content">
+          <Switch>
+            <Route path="/experiments" component={Experiments} />
+            <Route path="/stats" component={Stats} />
+            <Route path="/" component={Home} />
+          </Switch>
+        </div>
+        {isMobile ? <Botbar /> : <Rightbar />}
+      </Router>
+      
     </MobileContext.Provider>
     </SettingsContext.Provider>
   );
