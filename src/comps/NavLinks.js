@@ -1,12 +1,12 @@
 import { useContext } from 'react';
 import { Link } from 'react-router-dom';
 
-import { MobileContext } from '../util/mobility';
+import { LayoutContext } from '../context/layout';
 
 import './NavLinks.css';
 
 export default function NavLinks (props) {
-  const isMobile = useContext(MobileContext);
+  const { isMobile } = useContext(LayoutContext);
 
   return (
     <div className="navlinks">

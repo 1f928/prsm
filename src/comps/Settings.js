@@ -1,5 +1,5 @@
 import React, { useContext } from 'react';
-import { SettingsContext } from '../util/settings';
+import { SettingsContext } from '../context/settings';
 
 import { BsMoonStars } from 'react-icons/bs';
 import { IoSunnyOutline } from 'react-icons/io5';

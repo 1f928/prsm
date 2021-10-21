@@ -5,8 +5,8 @@ import {
   Route
 } from 'react-router-dom';
 
-import { MobileContext, useMobileCheck } from './util/mobility';
-import { SettingsContext, useSettings } from './util/settings';
+import { LayoutContext, useLayoutInfo } from './context/layout';
+import { SettingsContext, useSettings } from './context/settings';
 import ThemeProvider from './themes';
 
 import Home from './views/Home';
@@ -14,36 +14,35 @@ import Experiments from './views/Experiments';
 import Stats from './views/Stats';
 
 // import Background from './comps/Background';
-import Topbar from './comps/Topbar';
-import Botbar from './comps/Botbar';
-import Leftbar from './comps/Leftbar';
-import Rightbar from './comps/Rightbar';
+import StartBar from './comps/StartBar';
+import EndBar from './comps/EndBar';
 
 import './App.css';
 
 function App() {
-  const isMobile = useMobileCheck();
+  const {isLandscape, isMobile} = useLayoutInfo();
   const {settings, updateSettings} = useSettings();
+  console.log(isLandscape, isMobile);
 
   return (
     <SettingsContext.Provider value={{settings, updateSettings}}>
-    <MobileContext.Provider value={isMobile}>
+    <LayoutContext.Provider value={{isLandscape, isMobile}}>
     <ThemeProvider theme={settings.theme} brightness={settings.brightness} />
-      
-      {/* <Background /> */}
-      <Router>
-        {isMobile ? <Topbar /> : <Leftbar />}
-        <div className="content">
-          <Switch>
-            <Route path="/experiments" component={Experiments} />
-            <Route path="/stats" component={Stats} />
-            <Route path="/" component={Home} />
-          </Switch>
-        </div>
-        {isMobile ? <Botbar /> : <Rightbar />}
-      </Router>
-      
-    </MobileContext.Provider>
+      <div className="app">
+        {/* <Background /> */}
+        <Router>
+          <StartBar />
+          <div className="content">
+            <Switch>
+              <Route path="/experiments" component={Experiments} />
+              <Route path="/stats" component={Stats} />
+              <Route path="/" component={Home} />
+            </Switch>
+          </div>
+          <EndBar />
+        </Router>
+      </div>
+    </LayoutContext.Provider>
     </SettingsContext.Provider>
   );
 }

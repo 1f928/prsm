@@ -1,23 +1,36 @@
 
-#root {
+.app {
   color: var(--primary-fg-color);
   background-color: var(--primary-bg-color);
+
+  height: 100vh;
+
+  display: flex;
+
+  overflow-y: scroll;
 }
 
-.leftbar {
-  flex: 1 1 20%;
+.startbar {
+  flex: 0 1 20%;
+  position: sticky;
+  top: 0;
+  
+  box-shadow: var(--inside-border);
 }
 
-.rightbar {
+.endbar {
+  flex: 0 1 10%;
+  position: sticky;
+  top: 0;
 
-  flex: 1 1 10%;
+  box-shadow: var(--inside-border);
 }
 
 .content {
-  flex: 1 1 70%;
+  flex: 0 1 70%;
   text-align: center;
-  transition: all .25s ease-in;
 
+  height: fit-content;
 }
 
 .background {
@@ -27,8 +40,56 @@
   z-index: -1;
 }
 
-@media only screen and (max-width: 1500px) {
+/* Mobile (read comma as "or") */
+@media only screen and (max-height: 460px), (max-width: 460px) {
+  .startbar {
+    flex: 0 1 10%;
+  }
+  
+  .endbar {
+    flex: 0 1 20%;
+  }
+}
+
+/* Portrait */
+@media only screen and (max-aspect-ratio: 5 / 4) {
+
   .app {
+    position: relative;
+    display: block;
+  }
+
+  .startbar {
+    top: 0;
+    min-height: 8vh;
+    max-height: 2em;
+  }
+
+  .endbar {
+    bottom: 0;
+    height: 5vh;
+    min-height: 1.5em;
+  }
+
+  .content {
+    flex: unset;
+  }
+
+  /* Mobile (read comma as "or") */
+  @media only screen and (max-height: 460px), (max-width: 460px) {
+    .startbar {
+      height: 5vh;
+      min-height: 1.5em;
+    }
+
+    .endbar {
+      position: sticky;
+      min-height: 8vh;
+      max-height: 2em;
+    }
+  }
+
+  /* .app {
     display: block;
     flex-direction: column;
     overflow-y: scroll;
@@ -62,7 +123,5 @@
     flex: 0 0 86%;
     width: 100%;
     max-height: 86%;
-  }
+  } */
 }
-
-@media only screen

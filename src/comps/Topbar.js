@@ -8,8 +8,8 @@ export default function Topbar(props) {
 
   return (
     <div className="topbar">
-      <NavLinks />
-      <Settings />
+      {/* <NavLinks />
+      <Settings /> */}
     </div>
   );
 };
