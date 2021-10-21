@@ -21,7 +21,7 @@
 .endbar {
   flex: 0 1 10%;
   position: sticky;
-  top: 0;
+  bottom: 0;
 
   box-shadow: var(--inside-border);
 }
@@ -79,22 +79,22 @@
 
   /* Mobile (read comma as "or") */
   @media only screen and (max-height: 460px), (max-width: 460px) {
-    /* .startbar {
+    .startbar {
       position: fixed;
-      top: 0;
+      /* top: 0;
       height: 5vh;
-      min-height: 1.5em;
+      min-height: 1.5em; */
       width: 100%;
     }
 
     .endbar {
       position: fixed;
-      bottom: 0;
-      left: 0;
+      /* bottom: 0;
+      left: 0; */
       width: 100%;
-      min-height: 8vh;
-      max-height: 2em;
-    } */
+      /* min-height: 8vh;
+      max-height: 2em; */
+    }
   }
 
   /* .app {
