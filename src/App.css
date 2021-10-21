@@ -80,7 +80,7 @@
   /* Mobile (read comma as "or") */
   @media only screen and (max-height: 460px), (max-width: 460px) {
     .startbar {
-      position: sticky;
+      position: fixed;
       top: 0;
       height: 5vh;
       min-height: 1.5em;
