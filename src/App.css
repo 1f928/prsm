@@ -80,12 +80,18 @@
   /* Mobile (read comma as "or") */
   @media only screen and (max-height: 460px), (max-width: 460px) {
     .startbar {
+      position: sticky;
+      top: 0;
       height: 5vh;
       min-height: 1.5em;
+      width: 100%;
     }
 
     .endbar {
-      position: relative;
+      position: sticky;
+      bottom: 0;
+      left: 0;
+      width: 100%;
       min-height: 8vh;
       max-height: 2em;
     }
