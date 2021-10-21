@@ -5,9 +5,9 @@
   color: var(--primary-fg-color);
   background-color: var(--primary-bg-color);
   
-  display: flex;
+  /* display: flex;
   flex-direction: row;
-  justify-content: space-between;
+  justify-content: space-between; */
   
   overflow-y: scroll;
   overflow-x: hidden;
@@ -38,6 +38,7 @@
 
 @media only screen and (max-width: 1500px) {
   .app {
+    display: block;
     flex-direction: column;
     overflow-y: hidden;
   }
@@ -45,11 +46,17 @@
   .topbar {
     max-height: 7%;
     min-height: 7%;
+    width: 100vw;
   }
 
   .botbar {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    
     max-height: 7%;
     min-height: 7%;
+    width: 100vw;
 
     background: inherit;
     box-shadow: var(--inside-border);
