@@ -28,7 +28,7 @@ function App() {
     <SettingsContext.Provider value={{settings, updateSettings}}>
     <LayoutContext.Provider value={{isLandscape, isMobile}}>
     <ThemeProvider theme={settings.theme} brightness={settings.brightness} />
-      <div className="app">
+      {/* <div className="app"> */}
         {/* <Background /> */}
         <Router>
           <StartBar />
@@ -41,7 +41,7 @@ function App() {
           </div>
           <EndBar />
         </Router>
-      </div>
+      {/* </div> */}
     </LayoutContext.Provider>
     </SettingsContext.Provider>
   );
