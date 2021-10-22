@@ -1,9 +1,9 @@
-html, body, #root {
+html, body, #root, .app {
   height: 100%;
 }
 
 
-#root {
+.app {
   color: var(--primary-fg-color);
   background-color: var(--primary-bg-color);
 
@@ -60,7 +60,7 @@ html, body, #root {
 /* Portrait */
 @media only screen and (max-aspect-ratio: 5 / 4) {
 
-  #root {
+  .app {
     position: relative;
     display: block;
   }
@@ -74,7 +74,7 @@ html, body, #root {
 
   .endbar {
     bottom: 0;
-    height: 5vh;
+    max-height: 5vh;
     min-height: 1.5em;
     background: inherit;
   }
