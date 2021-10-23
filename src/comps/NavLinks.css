@@ -3,10 +3,9 @@
 
 .navlinks > a {
   right: 0px;
+  display: flex;
   width: fit-content;
 
-  padding: 3px 17px 10px 17px;
-  margin: 0px 0 15px 0;
   font-size: 3em;
   font-weight: 700;
   text-decoration: none;

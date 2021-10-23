@@ -18,12 +18,12 @@ const useLayoutInfo = () => {
     return () => window.removeEventListener('resize', listenerFn);
   }, []);
 
-  const switchRatio = 5 / 4;
-  const maxMobileSize = 460;
+  const switchRatio = 3 / 2;
+  const minLandscapeWidth = 1200;
+  const maxMobileSize = 512;
 
   const ratio = width / height;
-  console.log(ratio >= switchRatio);
-  const isLandscape = ratio >= switchRatio;
+  const isLandscape = (ratio >= switchRatio) && (width > minLandscapeWidth);
   const isMobile = Math.min(width, height) <= maxMobileSize;
 
   return { isLandscape, isMobile };

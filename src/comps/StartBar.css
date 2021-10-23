@@ -1,0 +1,105 @@
+
+
+
+.startbar {
+  flex: 0 1 19%;
+  max-width: 19%;
+  min-width: 19%;
+  position: sticky;
+  top: 0;
+  height: 100vh;
+  
+  box-shadow: var(--inside-border);
+
+  text-align: right;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+
+  font-size: .8vw;
+}
+
+.startbar > .name-bar {
+  margin: 20vh 1.4em 0 0;
+  width: fit-content;
+}
+
+.startbar > .name-bar > h1 {
+  font-size: 3em;
+}
+
+.startbar > .navlinks {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  margin-right: 1.4em;
+  row-gap: 2.5em;
+  font-size: .7em;
+}
+
+.startbar > .navlinks > a {
+  font-size: 3.5em;
+  column-gap: .4em;
+}
+
+.name-bar > .iconlinks {
+  padding: 1.5em .75em 5.25em 15em;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  column-gap: 3em;
+}
+
+/* Mobile Default (Landscape) */
+@media only screen and (max-height: 512px), (max-width: 512px) {
+  
+  /* Mobile Portrait */
+  @media only screen and (max-aspect-ratio: 3 / 2) {
+
+  }
+}
+
+/* Desktop Portrait */
+@media (max-aspect-ratio: 3 / 2) and (min-width: 513px) and (min-height: 513px), (max-width: 1200px) and (min-width: 513px) and (min-height: 513px) {
+
+    .startbar {
+      top: 0;
+      height: 6.5vh;
+      background: inherit;
+      max-width: unset;
+      width: 100%;
+      
+      padding: 0;
+      margin: 0;
+
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+      
+      font-size: 1.2em;
+    }
+
+    .startbar > h1 {
+      font-size: 4vh;
+      margin: 0 0 0 .6em;
+      user-select: none;
+    }
+
+    .startbar > .navlinks {
+      font-size: .8vh;
+      flex-direction: row;
+      column-gap: 5vw;
+      margin: 0 0 0 -10vw;
+    }
+
+    .startbar > .navlinks > a {
+      flex-direction: row-reverse;
+      row-gap: 5vw;
+      align-items: center;
+    }
+
+    .startbar > .light-toggle {
+      font-size: 1.2vh;
+      margin: 0 2em 0 0
+    }
+}

@@ -6,6 +6,10 @@
   transition: color .25s ease-in;
 }
 
+.iconlink > svg {
+  display: block;
+}
+
 .iconlink:hover, .iconlink:active {
   color: var(--fg-hover-color);
 }

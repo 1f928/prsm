@@ -10,7 +10,7 @@ import { SettingsContext, useSettings } from './context/settings';
 import ThemeProvider from './themes';
 
 import Home from './views/Home';
-import Experiments from './views/Experiments';
+import Lab from './views/Lab';
 import Stats from './views/Stats';
 
 // import Background from './comps/Background';
@@ -22,7 +22,6 @@ import './App.css';
 function App() {
   const {isLandscape, isMobile} = useLayoutInfo();
   const {settings, updateSettings} = useSettings();
-  console.log(isLandscape, isMobile);
 
   return (
     <SettingsContext.Provider value={{settings, updateSettings}}>
@@ -34,7 +33,7 @@ function App() {
           <StartBar />
           <div className="content">
             <Switch>
-              <Route path="/experiments" component={Experiments} />
+              <Route path="/lab" component={Lab} />
               <Route path="/stats" component={Stats} />
               <Route path="/" component={Home} />
             </Switch>

@@ -4,9 +4,9 @@ import { SettingsContext } from '../context/settings';
 import { BsMoonStars } from 'react-icons/bs';
 import { IoSunnyOutline } from 'react-icons/io5';
 
-import './Settings.css';
+import './LightToggle.css';
 
-export default function Settings (props) {
+export default function LightToggle (props) {
 
   const {settings, updateSettings} = useContext(SettingsContext);
   const {brightness} = settings;
@@ -21,12 +21,10 @@ export default function Settings (props) {
   // }
 
   return (
-    <div className="settings">
+    <div className="light-toggle">
       {(brightness === "light") ?
       <BsMoonStars className="brightness-icon moon" onClick={updateBrightness}/> :
       <IoSunnyOutline className="brightness-icon sun" onClick={updateBrightness} />}
-      {/* <div className="fake-settings" /> */}
-      {/* <ThemePicker /> */}
     </div>
   );
 };

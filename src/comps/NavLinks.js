@@ -1,18 +1,17 @@
-import { useContext } from 'react';
+
 import { Link } from 'react-router-dom';
 
-import { LayoutContext } from '../context/layout';
 
 import './NavLinks.css';
 
-export default function NavLinks (props) {
-  const { isMobile } = useContext(LayoutContext);
+export default function NavLinks () {
 
   return (
     <div className="navlinks">
-      <Link to="/">home{isMobile ? '' : ' 🛸'}</Link>
-      <Link to="/experiments">experiments{isMobile ? '' : ' 🧪'}</Link>
-      <Link to="/stats">stats{isMobile ? '' : ' 📃'}</Link>
+      <Link to="/"><span>home</span><span>🛸</span></Link>
+      <Link to="/lab"><span>lab</span><span>🧪</span></Link>
+      <Link to="/stats"><span>stats</span><span>📜</span></Link>
     </div>
+    // 📃📜📈🍜
   );
 };
