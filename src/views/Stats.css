@@ -1,0 +1,80 @@
+
+.stats-intro {
+  margin: 0 10% 30% 10%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.stats-intro > p {
+  font-weight: 600;
+  font-size: 2em;
+  max-width: 25em;
+}
+
+.stats-intro > p > a {
+  color: var(--primary-fg-color);
+  text-decoration-thickness: .01em;
+  text-decoration-style: wavy;
+}
+
+.stats-intro > p > a:hover {
+  color: var(--fg-hover-color);
+}
+
+.stats-intro > p.smol {
+  font-size: 1.2em;
+  max-width: 35em;
+  font-style: italic;
+  font-weight: 400;
+}
+.smol.end {
+  margin-top: -1em;
+}
+
+.stat-group {
+  background-color: rgba(46, 0, 133, 0.137);
+  border-radius: 1em;
+  padding: 1vh 0 2vh 0;
+  margin: 10vh 5vw 2vh 5vw;
+}
+
+.sg-title {
+  color: var(--primary-bg-color);
+  margin: 0;
+  font-size: 3em;
+}
+
+.stats {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.sg-stat {
+  width: 40%;
+  margin: 5%;
+  background-color: var(--primary-bg-color);
+
+  border-radius: .25em;
+}
+
+
+/* Mobile Default (Landscape) */
+@media only screen and (max-height: 512px), (max-width: 512px) {
+  
+  .stats-intro > p {
+    font-size: 1.2em;
+  }
+  
+  /* Mobile Portrait */
+  @media only screen and (max-aspect-ratio: 3 / 2) {
+    .stats-intro > p {
+      font-size: 1.4em;
+    }
+  }
+}
+
+/* Desktop Portrait */
+@media (max-aspect-ratio: 3 / 2) and (min-width: 513px) and (min-height: 513px), (max-width: 1200px) and (min-width: 513px) and (min-height: 513px) {
+  
+}

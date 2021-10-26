@@ -3,7 +3,7 @@
   display: block;
   color: inherit;
   font-size: 2em;
-  transition: color .25s ease-in;
+  transition: color .2s ease-out;
 }
 
 .iconlink > svg {

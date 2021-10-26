@@ -10,7 +10,7 @@
   font-weight: 700;
   text-decoration: none;
   color: inherit;
-  transition: color .25s ease-in;
+  transition: color .2s ease-out;
 
   /* color: transparent;
   background-clip: text;

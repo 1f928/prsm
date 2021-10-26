@@ -6,7 +6,7 @@
 }
 
 .brightness-icon {
-  transition: color .25s ease-in;
+  transition: color .2s ease-out;
 }
 
 .brightness-icon.moon {

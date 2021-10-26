@@ -3,7 +3,7 @@
 const Lab = (props) => {
 
   return (
-    "experiments"
+    "(under construction)"
   )
 };
 

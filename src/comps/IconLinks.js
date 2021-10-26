@@ -19,6 +19,7 @@ export default function IconLinks (props) {
 
       <a target="blank"
         href="https://github.com/1f928"
+        rel="noreferrer"
         className="iconlink">
 
         <FaGithub />
@@ -26,6 +27,7 @@ export default function IconLinks (props) {
 
       <a target="blank"
         href="https://www.linkedin.com/in/brian-hagerty-777a41156/"
+        rel="noreferrer"
         className="iconlink">
           
         <FaLinkedin />

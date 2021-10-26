@@ -10,7 +10,7 @@ export default function NavLinks () {
     <div className="navlinks">
       <Link to="/"><span>home</span><span>🛸</span></Link>
       <Link to="/lab"><span>lab</span><span>🧪</span></Link>
-      <Link to="/stats"><span>stats</span><span>📜</span></Link>
+      {/* <Link to="/stats"><span>stats</span><span>📜</span></Link> */}
     </div>
     // 📃📜📈🍜
   );

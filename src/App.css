@@ -15,7 +15,8 @@ html, body, #root, .app {
 }
 
 .content {
-  flex: 0 1 70%;
+  flex: 0 1 71%;
+  padding: 20vh 5% 10vh 5%;
   text-align: center;
 
   height: fit-content;
@@ -32,15 +33,16 @@ html, body, #root, .app {
 @media only screen and (max-height: 512px), (max-width: 512px) {
   
   /* Mobile Portrait */
-  @media only screen and (max-aspect-ratio: 3  / 2) {
+  @media only screen and (max-aspect-ratio: 3 / 2) {
     .content {
       flex: unset;
-      width: 100%;
+      width: 90%;
+      padding: 10vh 5% 20vh 5%;
     }
   }
 }
 
-/* Desktop Portrait */
+/* Desktop Portrait (yes, it's lengthy and convoluded, but that's css conditionals for ya) */
 @media (max-aspect-ratio: 3 / 2) and (min-width: 513px) and (min-height: 513px), (max-width: 1200px) and (min-width: 513px) and (min-height: 513px) {
 
   .app {
@@ -50,7 +52,9 @@ html, body, #root, .app {
 
   .content {
     flex: unset;
-    width: 100%;
+    width: 90%;
+    min-height: 100vh;
+    padding: 10vh 5% 10vh 5%;
   }
 
 }

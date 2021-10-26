@@ -1,8 +1,8 @@
 
 /* Default (Desktop Landscape) */
 .endbar {
-  flex: 0 1 10vw;
-  max-width: 10vw;
+  flex: 0 1 10%;
+  max-width: 10%;
   min-width: 7em;
   position: sticky;
   top: 0;
@@ -35,8 +35,8 @@
   .endbar > .navlinks {
     display: flex;
     flex-direction: column;
-    row-gap: 4vh;
-    margin-top: 5vh;
+    row-gap: 6vh;
+    margin-top: 8vh;
   }
 
   .endbar > .navlinks > a {
@@ -50,6 +50,7 @@
 
   .endbar > .light-toggle {
     margin: auto;
+    margin-bottom: 10vh;
     font-size: 1.15em;
   }
 
@@ -61,7 +62,7 @@
 
       position: fixed;
       display: flex;
-      flex-direction: row-reverse;
+      flex-direction: row;
       
       background: inherit;
 
@@ -77,8 +78,8 @@
     .endbar > .navlinks {
       display: flex;
       flex-direction: row;
-      column-gap: 9vw;
-      margin: 1vh 10vw 0 0;
+      column-gap: 12vw;
+      margin: 1vh 0 0 7vw;
     }
 
     .endbar > .navlinks > a {
@@ -91,6 +92,8 @@
   
     .endbar > .light-toggle {
       font-size: 1.5em;
+      margin: auto;
+      margin-right: 7vw
     }
   }
 }
@@ -134,6 +137,7 @@
     color: var(--primary-fg-color);
     text-decoration-thickness: .08em;
     text-decoration-style: wavy;
+    transition: color .2s ease-out;
   }
 
   .endbar > p > a:hover {
