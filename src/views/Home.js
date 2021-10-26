@@ -46,7 +46,7 @@ function ExperimentsBlock(props) {
         <div className="experiment-block" />
         <div className="experiment-block" />
       </div>
-      <Link to="/experiments" className="more">more projects</Link>
+      <Link to="/lab" className="more">more projects</Link>
     </div>
   );
 }
