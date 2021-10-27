@@ -7,6 +7,7 @@
   position: sticky;
   top: 0;
   height: 100vh;
+  mix-blend-mode: hard-light;
 
   box-shadow: var(--inside-border);
 }
@@ -64,7 +65,7 @@
       display: flex;
       flex-direction: row;
       
-      background: inherit;
+      /* background: inherit; */
 
       bottom: 0;
       width: 100%;
@@ -112,7 +113,7 @@
     min-width: unset;
     max-width: unset;
     
-    background: inherit;
+    /* background: inherit; */
 
     display: flex;
     justify-content: space-between;

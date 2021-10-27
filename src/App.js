@@ -13,7 +13,7 @@ import Home from './views/Home';
 import Lab from './views/Lab';
 import Stats from './views/Stats';
 
-// import Background from './comps/Background';
+import Background from './Background';
 import StartBar from './comps/StartBar';
 import EndBar from './comps/EndBar';
 
@@ -28,7 +28,7 @@ function App() {
     <LayoutContext.Provider value={{isLandscape, isMobile}}>
     <ThemeProvider theme={settings.theme} brightness={settings.brightness} />
       <div className="app">
-        {/* <Background /> */}
+        <Background />
         <Router>
           <StartBar />
           <div className="content">
@@ -37,6 +37,7 @@ function App() {
               <Route path="/stats" component={Stats} />
               <Route path="/" component={Home} />
             </Switch>
+          <Background />
           </div>
           <EndBar />
         </Router>

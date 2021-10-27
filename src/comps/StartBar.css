@@ -65,7 +65,7 @@
     .startbar {
       top: 0;
       height: 6.5vh;
-      background: inherit;
+      /* background: inherit; */
       max-width: unset;
       width: 100%;
       

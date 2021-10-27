@@ -7,6 +7,7 @@ html, body, #root, .app {
 .app {
   color: var(--primary-fg-color);
   background-color: var(--primary-bg-color);
+  mix-blend-mode: hard-light;
 
   display: flex;
   justify-content: space-between;
