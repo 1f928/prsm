@@ -6,8 +6,7 @@ html, body, #root, .app {
 
 .app {
   color: var(--primary-fg-color);
-  background-color: var(--primary-bg-color);
-  mix-blend-mode: hard-light;
+  /* mix-blend-mode: hard-light; */
 
   display: flex;
   justify-content: space-between;
@@ -19,6 +18,7 @@ html, body, #root, .app {
   flex: 0 1 71%;
   padding: 20vh 5% 10vh 5%;
   text-align: center;
+  /* z-index: -2; */
 
   height: fit-content;
 }

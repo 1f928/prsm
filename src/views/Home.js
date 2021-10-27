@@ -71,7 +71,7 @@ function ExperimentsBlock(props) {
       <h1>Experiments</h1>
       <p>(under construction)</p>
       <div className="section-content">
-        {experimentShowcase.map((e) => <Experiment experiment={e} />)}
+        {experimentShowcase.map((e) => <Experiment experiment={e} key={e.name} />)}
       </div>
       <Link to="/lab" className="more">more projects</Link>
     </div>
@@ -137,7 +137,7 @@ function SkillGroup({group}) {
     <div className="skill-block">
       <h2>{title} {icon}</h2>
       <div className="skills">
-        {skills.map((skillName) => <span className="skill">{skillName}</span>)}
+        {skills.map((skillName) => <span className="skill" key={skillName}>{skillName}</span>)}
       </div>
     </div>
   );
@@ -149,7 +149,7 @@ function ProficienciesBlock(props) {
     <div className="section tech">
       <h1>Tools</h1>
       <div className="section-content">
-        {skillGroups.map((group) => <SkillGroup group={group} />)}
+        {skillGroups.map((group) => <SkillGroup group={group} key={group.title} />)}
       </div>
       <a href="https://drive.google.com/file/d/1Usp-0cvA8SDB94swLjXDQfOICjBwHZof/view"
          target="_blank"

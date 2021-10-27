@@ -5,7 +5,7 @@ const DefaultTheme = {
         "--primary-fg-color": "#2c002e",
         "--focus-fg-color": "#e568a7",
         "--inside-border": "0px 0px 17px 5px #09015163",
-        "--fg-hover-color": "#fef"
+        "--fg-hover-color": "#ffeeff"
     },
     dark: {
         "--primary-bg-color": "#25224c",

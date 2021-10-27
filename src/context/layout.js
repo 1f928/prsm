@@ -26,7 +26,7 @@ const useLayoutInfo = () => {
   const isLandscape = (ratio >= switchRatio) && (width > minLandscapeWidth);
   const isMobile = Math.min(width, height) <= maxMobileSize;
 
-  return { isLandscape, isMobile };
+  return { isLandscape, isMobile, width, height };
 }
 
 const defaultLayout = { isLandscape: true, isMobile: false }

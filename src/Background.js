@@ -4,34 +4,35 @@ const randRange = (max) => {
   return Math.floor(Math.random() * max);
 };
 
-const drawStar = (context, width, height) => {
-  const starColor = '#fff5';
+const drawStar = (context, width, height, color) => {
   const starSize =  1;
   const x = randRange(width);
   const y = randRange(height);
 
-  context.fillStyle = starColor;
+  context.fillStyle = color;
   context.beginPath();
-  context.arc(x, y, starSize, 0, 2 * Math.PI);
+  context.arc(x, y, starSize + Math.random(), 0, 2 * Math.PI);
   context.fill();
 };
 
-function Background(props) {
+function Background({theme, width, height}) {
 
   const ref = useRef(null);
   
   useEffect(() => {
     const canvas = ref.current;
     const context = canvas.getContext('2d');
-    const width = canvas.offsetWidth;
-    const height = canvas.offsetHeight;
     canvas.width = width;
     canvas.height = height;
+    const starCount = Math.floor((width * height) / 5000);
+    const fgColor = (theme === "light") ? '--fg-hover-color' : "--focus-fg-color"
 
-    context.fillStyle='#7c7cd9';
+    const bgColor = getComputedStyle(document.getElementById("root")).getPropertyValue("--primary-bg-color");
+    const starColor = getComputedStyle(document.getElementById("root")).getPropertyValue(fgColor) + "99";
+    context.fillStyle = bgColor;
     context.fillRect(0,0,canvas.width,canvas.height);
-    Array.from({length: 1000}).forEach(_ => drawStar(context, width, height));
-  }, [ref]);
+    Array.from({length: starCount}).forEach(_ => drawStar(context, width, height, starColor));
+  }, [ref, theme, width, height]);
 
   return (
     <canvas className="background" ref={ref} />

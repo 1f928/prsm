@@ -20,7 +20,7 @@ import EndBar from './comps/EndBar';
 import './App.css';
 
 function App() {
-  const {isLandscape, isMobile} = useLayoutInfo();
+  const {isLandscape, isMobile, width, height} = useLayoutInfo();
   const {settings, updateSettings} = useSettings();
 
   return (
@@ -28,7 +28,7 @@ function App() {
     <LayoutContext.Provider value={{isLandscape, isMobile}}>
     <ThemeProvider theme={settings.theme} brightness={settings.brightness} />
       <div className="app">
-        <Background />
+        <Background theme={settings.brightness} width={width} height={height} />
         <Router>
           <StartBar />
           <div className="content">
@@ -37,7 +37,6 @@ function App() {
               <Route path="/stats" component={Stats} />
               <Route path="/" component={Home} />
             </Switch>
-          <Background />
           </div>
           <EndBar />
         </Router>
