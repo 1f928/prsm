@@ -11,7 +11,6 @@ import {
   FaCode
 } from 'react-icons/fa'
 
-import './Experiments.css';
 import './Home.css';
 
 const Home = (props) => {
@@ -36,6 +35,35 @@ const Home = (props) => {
   )
 };
 
+const experimentShowcase = [
+  {
+    name: "bh.dev",
+    description: "This site! Mainly built in React, but hosted within a K8s cluster along with other projects. View README on GitHub for more info!",
+    githubLink: "https://github.com/1f928/prsm",
+    liveLink: "https://bh.dev"
+  }
+];
+
+function Experiment({experiment}) {
+  const {
+    name,
+    description,
+    githubLink,
+    liveLink
+  } = experiment;
+
+  return (
+    <div className="experiment-block">
+      <h2>{name}</h2>
+      <p>{description}</p>
+      <div className="links">
+        {liveLink ? <a href={liveLink} target="_blank" rel="noreferrer">Live</a> : null}
+        <a href={githubLink} target="_blank" rel="noreferrer">GitHub</a>
+      </div>
+    </div>
+  );
+}
+
 function ExperimentsBlock(props) {
 
   return (
@@ -43,8 +71,7 @@ function ExperimentsBlock(props) {
       <h1>Experiments</h1>
       <p>(under construction)</p>
       <div className="section-content">
-        <div className="experiment-block" />
-        <div className="experiment-block" />
+        {experimentShowcase.map((e) => <Experiment experiment={e} />)}
       </div>
       <Link to="/lab" className="more">more projects</Link>
     </div>
@@ -101,7 +128,7 @@ const skillGroups = [
       "Python", "Java", "Scala", "Groovy", "Bash", "C++"
     ]
   }
-]
+];
 
 function SkillGroup({group}) {
   const {title, icon, skills} = group;

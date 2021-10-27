@@ -39,6 +39,9 @@ h1 {
   margin: 0em;
 }
 
+.filter {
+}
+
 .greeting {
   margin-bottom: 0em;
 }
@@ -67,6 +70,95 @@ h1 {
 .section a:hover {
   color: var(--fg-hover-color);
 }
+
+.section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.section-content {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 5em;
+  max-width: 50em;
+}
+
+.experiment-block {
+  width: 20em;
+
+  /* border: 1px solid rgba(95, 48, 126, 0.336); */
+  border-radius: 8px;
+  background-color: rgba(87, 67, 177, 0.253);
+}
+
+.experiment-block > h2 {
+  border-bottom: .15em solid var(--primary-bg-color);
+  margin: 0;
+  padding: .5em 0 .5em 0;
+}
+
+.experiment-block > p {
+  border-bottom: .2em solid var(--primary-bg-color);
+  margin: 0;
+  padding: 1em 1em 1em 1em;
+}
+
+.experiment-block > .links {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.links > a {
+  flex: 0 0 50%;
+  padding-top: .3em;
+  padding-bottom: .6em;
+
+}
+.links > a + a {
+  height: 100%;
+  width: 0;
+  border-left: .15em solid var(--primary-bg-color);
+}
+
+.section.tech > .section-content {
+  gap: 2em;
+}
+
+.skill-block {
+  width: 23em;
+
+  border-radius: 8px;
+  background-color: rgba(87, 67, 177, 0.253);
+}
+
+.skill-block > h2 {
+  width: 100%;
+  /* text-align: center; */
+}
+
+.skill-block > h2 > svg {
+font-size: 1.2em;
+margin-left: .5em;
+}
+
+.skills {
+
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-content: center;
+  padding: .5em;
+}
+
+.skill {
+  background-color: var(--primary-bg-color);
+  border-radius: .3em;
+  padding: .5em;
+  margin: .5em;
+}
+
 
 /* Mobile Default (Landscape) */
 @media only screen and (max-height: 512px), (max-width: 512px) {
