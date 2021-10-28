@@ -115,6 +115,7 @@ h1 {
   padding-top: .3em;
   padding-bottom: .6em;
 
+  text-decoration-thickness: .08em;
 }
 
 .links > a + a {
