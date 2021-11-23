@@ -41,6 +41,18 @@ const experimentShowcase = [
     description: "This site! Mainly built in React, but hosted within a K8s cluster along with other projects. View README on GitHub for more info!",
     githubLink: "https://github.com/1f928/prsm",
     liveLink: "https://bh.dev"
+  },
+  {
+    name: "COVID-19 Dashboard",
+    description: "A COVID-19 dashboard for the STL area. Built in React, consumes my COVID-19 API",
+    githubLink: "https://github.com/1f928/dashboard-covid",
+    liveLink: "https://bh.dev/lab/stl-c19/",
+  },
+  {
+    name: "COVID-19 API",
+    description: "A COVID-19 API that extracts virus and vaccine data from a number of sources, transforms it, and serves it. Built in NodeJS/Express.",
+    githubLink: "https://github.com/1f928/api-covid",
+    liveLink: "https://bh.dev/lab/stl-c19/",
   }
 ];
 

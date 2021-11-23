@@ -87,6 +87,7 @@ h1 {
 
 .experiment-block {
   width: 20em;
+  height: fit-content;
 
   /* border: 1px solid rgba(95, 48, 126, 0.336); */
   border-radius: 8px;
